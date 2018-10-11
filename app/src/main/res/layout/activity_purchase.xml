@@ -1,0 +1,95 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:id="@+id/container"
+    android:orientation="vertical"
+    tools:context=".PurchaseActivity">
+
+
+
+        <LinearLayout
+            android:id="@+id/Treenumber"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/Treeinformation"
+            android:orientation="vertical"
+            android:layout_alignParentTop="true"
+            >
+
+            <RadioGroup xmlns:android="http://schemas.android.com/apk/res/android"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+                <RadioButton android:id="@+id/PickupOption"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="Pick-Up"
+                    android:onClick="onRadioButtonClicked"/>
+                <RadioButton android:id="@+id/DeliveryOption"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="Delivery"
+                    android:onClick="onRadioButtonClicked"/>
+
+                <LinearLayout
+                    android:id="@+id/deliveryAddressLayout"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content">
+                    <EditText
+                        android:id="@+id/deliveryAddress"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:hint="Delivery Address"/>
+
+                </LinearLayout>
+
+            </RadioGroup>
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_marginTop="30dp"
+            android:id="@+id/PurchaseDetails"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+
+            android:orientation="vertical">
+
+            <TextView
+                android:id="@+id/PriceEquation"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text=" $23.33 x 13 = $120.33 " />
+
+            <TextView
+                android:id="@+id/AdditionalCost"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text=" + $3 (Delivery Fee)" />
+
+        <TextView
+            android:id="@+id/TotalPrice"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:textSize="35px"
+            android:text=" = $123.23"
+            />
+
+
+
+
+
+        </LinearLayout>
+
+    <Button
+        android:id="@+id/purchase"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/Treenumber"
+        android:text="purchase" />
+
+
+
+</LinearLayout>
