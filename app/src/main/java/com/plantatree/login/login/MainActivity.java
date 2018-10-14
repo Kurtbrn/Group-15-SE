@@ -53,6 +53,6 @@ public class MainActivity extends AppCompatActivity {
         ContentValues contentValues = new ContentValues();
         contentValues.put(DatabaseHelper.C_2, fname);
         contentValues.put(DatabaseHelper.C_3, pass);
-        long id = db.insert(DatabaseHelper.TABLE_NAME, null, contentValues);
+        long id = db.insert(DatabaseHelper.LOGIN_TABLE, null, contentValues);
     }
 }
